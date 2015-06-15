@@ -1,0 +1,1388 @@
+﻿/* CJE - removed due to conflict with IC-2-15 Refresh
+@font-face
+{
+    font-family: "Avenir LT W01 65 Medium";
+    src: url("Fonts/212ab03d-5db2-4d6a-b94c-171cc702aa51.eot?#iefix");
+    src: url("Fonts/212ab03d-5db2-4d6a-b94c-171cc702aa51.eot?#iefix") format("eot"),url("Fonts/2cac77ec-9bc0-4ee7-87e4-27650190744f.woff") format("woff"),url("Fonts/aaf11848-aac2-4d09-9a9c-aac5ff7b8ff4.ttf") format("truetype"),url("Fonts/294099f3-8d00-4676-afc5-5e9d8d43ad69.svg#294099f3-8d00-4676-afc5-5e9d8d43ad69") format("svg");
+}
+
+@font-face
+{
+    font-family: "Avenir LT W01 85 Heavy";
+    src: url("Fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix");
+    src: url("Fonts/f61bf0f6-c193-4100-b940-12a1a01dcee5.eot?#iefix") format("eot"),url("Fonts/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff") format("woff"),url("Fonts/d1dc54b2-878d-4693-8d6e-b442e99fef68.ttf") format("truetype"),url("Fonts/731dd4d3-64da-427d-ba61-01575b3cf3f7.svg#731dd4d3-64da-427d-ba61-01575b3cf3f7") format("svg");
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFF;
+    font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+    background-color: white;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+table
+{
+    font-size: 11px; // hack: for some unknown reason, firefox and chrome were overriding the font-size style from the div#main in all <table> tags
+    border-collapse: collapse; // to discuss: we use the default "separate" in drastically fewer places (none?) so why not reset the default like this?
+}
+*/
+
+.MasterPageHeader
+{
+    position: relative;
+    width: 100%; /* for IE 6 */
+    height: 105px; /* hack: without this there are a couple pixels of white space between it and the menu. This is the height of the logo image. */
+}
+
+.MasterPageFooter
+{
+    height: 70px; /* hack: without this there are a couple pixels of white space between it and the menu. This is the height of the logo image. */
+    margin: 15px 0px 0px 0px;
+    padding: 0px;
+}
+
+.CompanyFont
+{
+    font-family: 'Avenir LT W01 65 Medium', Verdana;
+}
+
+.CompanyHeavyFont
+{
+    font-family: 'Avenir LT W01 85 Heavy', Verdana;
+}
+
+.TableHeader
+{
+    color: #FFF;
+    font-weight: bold;
+    background-color: #013B6A;
+    border-color: #FFF;
+    border: 1px solid #FFF;
+}
+
+td.display-label
+{
+    padding: 3px;
+    font-weight: bold;
+    text-align: right;
+}
+
+td.display-field
+{
+    padding: 3px;
+}
+
+.exportLink
+{
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 3px 6px 3px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.exportLink_Disabled
+{
+    text-decoration: none;
+    background-color: #FEFEFE;
+    color: #999999;
+    padding: 3px 6px 3px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    cursor: default;
+}
+
+.exportImage
+{
+    width: 14px;
+    height: 14px;
+    vertical-align: bottom;
+    border: none;
+}
+
+.createTicket_Disabled
+{
+    -moz-box-shadow:inset -12px 14px 40px -10px #ffffff;
+	-webkit-box-shadow:inset -12px 14px 40px -10px #ffffff;
+	box-shadow:inset -12px 14px 40px -10px #ffffff;
+	background-color:#FEFEFE;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #999;
+	display:inline-block;
+	color:#999999;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:normal;
+	padding:3px 5px;
+	text-decoration:none;
+	text-shadow:-36px -34px 14px #ffffff;
+    cursor: default;
+}
+
+.createTicket {
+	-moz-box-shadow: inset -12px 14px 40px -10px #ffffff;
+	-webkit-box-shadow: inset -12px 14px 40px -10px #ffffff;
+	box-shadow: inset -12px 14px 40px -10px #ffffff;
+	background-color: #CCCCCC;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #999;
+	display: inline-block;
+	color: #000000;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: normal;
+	padding: 3px 5px;
+	text-decoration: none;
+	-webkit-text-shadow: -36px -34px 14px #ffffff;
+	text-shadow: -36px -34px 14px #ffffff;
+	cursor: pointer;
+}
+
+.createTicket:hover
+{
+	background-color:#dfdfdf;
+}
+
+.createTicket:active
+{
+	-moz-box-shadow:inset -12px 14px 40px -10px #d3d3d3;
+	-webkit-box-shadow:inset -12px 14px 40px -10px #d3d3d3;
+	box-shadow:inset -12px 14px 40px -10px #d3d3d3;
+	-webkit-text-shadow: -36px -34px 14px #d3d3d3;
+	text-shadow: -36px -34px 14px #d3d3d3;
+}
+
+/* genericButton */
+
+.genericButton {
+	-moz-box-shadow: inset -12px 14px 40px -10px #ffffff;
+	-webkit-box-shadow: inset -12px 14px 40px -10px #ffffff;
+	box-shadow: inset -12px 14px 40px -10px #ffffff;
+	background-color: #CCCCCC;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #999;
+	display: inline-block;
+	color: #000000;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: normal;
+	padding: 3px 5px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.genericButton:hover
+{
+	background-color:#dfdfdf;
+}
+
+.genericButton:active
+{
+	-moz-box-shadow:inset -12px 14px 40px -10px #d3d3d3;
+	-webkit-box-shadow:inset -12px 14px 40px -10px #d3d3d3;
+	box-shadow:inset -12px 14px 40px -10px #d3d3d3;
+	-webkit-text-shadow: -36px -34px 14px #d3d3d3;
+	text-shadow: -36px -34px 14px #d3d3d3;
+}
+
+
+.popupContent
+{
+    font-weight: bold;
+    font-family: Arial;
+}
+
+/*Space out the label sizes to make consistent widths for asp radiobuttonlist*/
+/*Chrome spacing*/
+.SpacedRadioButtonList td
+{
+    width: 120px;
+}
+/*IE spacing*/
+.SpacedRadioButtonList label
+{
+    width: 100px;
+}
+
+.nowrap
+{
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* added specifically for the reports styling, might be able to remove this if those grids are reworked to not be 3 separate tables/grids for each 1 */
+table.TableHeader th
+{
+    padding: 3px;
+    border: 1px solid #FFF;
+}
+
+.TableFooter
+{
+    color: #000000;
+    font-weight: bold;
+    background-color: #FFF;
+}
+
+/* added specifically for the reports styling, might be able to remove this if those grids are reworked to not be 3 separate tables/grids for each 1 */
+table.TableFooter th
+{
+    border: 1px solid #000;
+    border-top-width: 0px;
+    border-color: #999;
+    padding: 3px;
+}
+
+.rounded-corners
+{
+    border-radius: 5px;
+}
+
+.MasterPageContent
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.LogoutLink
+{
+    color: #38B4FC;
+    padding: 0px 10px 0px 10px;
+}
+
+body#bdyMaster
+{
+    font-size: 11px;
+    font-weight: normal;
+}
+
+/* CJE - removed due to conflict with IC-2-15 Refresh
+div#main
+{
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    width: 960px;
+    color: #333333;
+    background-color: White;
+}
+
+h1
+{
+    font-family: 'Avenir LT W01 65 Medium', Verdana;
+    font-size: 15px;
+    font-weight: bold;
+    color: #013B6A;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1em;
+    padding: 6px;
+    margin: 4px 0 4px 0;
+    display: block;
+    text-align: left;
+    border-bottom-style: solid;
+    border-bottom-color: #FFC016;
+    border-bottom-width: 2px;
+}
+
+h2
+{
+    font-family: 'Avenir LT W01 65 Medium', Verdana;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1em;
+    padding: 4px;
+    margin: 4px 0 4px 0;
+    display: block;
+    background-color: #013B6A;
+    text-align: left;
+}
+
+h3
+{
+    font-family: 'Avenir LT W01 65 Medium', Verdana;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1em;
+    padding: 4px;
+    margin: 4px 0 4px 0;
+    text-align: left;
+}
+*/
+
+div#name, div#links
+{
+    margin: 0;
+    padding: 4px;
+    background-color: #FFFFFF;
+    font-size: 11px;
+    color: #666666;
+}
+
+    div#name a
+    {
+        text-decoration: none;
+        color: #666666;
+    }
+
+        div#name a:hover
+        {
+            text-decoration: underline;
+            color: #000000;
+        }
+
+
+div#name
+{
+    text-align: left;
+    float: left;
+}
+
+div#nav
+{
+    margin: 0;
+    padding: 8px;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+.disclaimer
+{
+    display: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 15px;
+    border-collapse: separate;
+    border: 1px solid #666666;
+    font-size: 11px;
+    color: #333333;
+}
+
+.formLabel
+{
+    font-weight: bold;
+    padding-right: .5em;
+}
+
+.top
+{
+    vertical-align: top;
+}
+
+.left
+{
+    text-align: left;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.readOnly
+{
+    color: #808080;
+}
+
+#_divGvAccountCodes, #_divGvTollFreeRingTo
+{
+    overflow: auto;
+    width: 100%;
+    max-height: 500px;
+    border: 1px solid #FFF;
+}
+
+div#footer
+{
+    vertical-align: middle;
+    font-family: 'Avenir LT W01 65 Medium', Verdana;
+}
+
+div#footerText
+{
+    position: relative;
+    top: -50px;
+    left: 0;
+    color: white;
+    float: left;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+div#footerLinks
+{
+    position: relative;
+    top: -50px;
+    left: 0;
+    text-align: right;
+    float: right;
+    padding-right: 20px;
+}
+
+    div#footerLinks a
+    {
+        text-decoration: none;
+        color: #38B4FC;
+    }
+
+        div#footerLinks a:hover
+        {
+            text-decoration: underline;
+            color: #FECA37;
+        }
+
+
+.disclaimerLink
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: #38B4FC;
+}
+
+    .disclaimerLink:hover
+    {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #FECA37;
+    }
+
+
+div#copyright
+{
+    font-size: 9px;
+    font-weight: normal;
+    color: #A1A1A1;
+    margin: 5px;
+}
+
+#UpdatingPanel
+{
+    display: none;
+    font-size: 20pt;
+    position: absolute;
+    color: black;
+    background-color: gray;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+#UpdatingLabel
+{
+    text-align: center;
+    vertical-align: middle;
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.ContentOverlay
+{
+    opacity: 0.5;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 9500;
+    top: 0;
+    left: 0;
+    position: fixed;
+    filter: alpha(opacity=50);
+    display: none;
+}
+
+.ContentOverlayCentered
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+    z-index: 100000;
+}
+
+.ContentOverlayAlert
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+    z-index: 100000;
+}
+
+.k-ie8 .ContentOverlayAlert
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    zoom: 1;
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);*/ /* IE 6 & 7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; /* IE8 */
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)";*/ /* IE8 */
+    text-align: center;
+    z-index: 1000;
+}
+
+.question
+{
+    font-weight: bold;
+}
+
+.answer
+{
+}
+
+.messageBox
+{
+    border: silver 1px solid;
+    padding: 8px 8px 8px 8px;
+    margin: 4px 4px 4px 4px;
+    background: #f4f4f4;
+}
+
+.loginValidationSummary
+{
+    margin-top: 5px;
+    margin-left: -20px;
+}
+
+.dropShadowGeneral
+{
+    box-shadow: 0px -2px 2px #666, 2px 0px 2px #666, 0px 2px 2px #666, -2px 0px 2px #666;
+    -moz-box-shadow: 0px -2px 2px #666, 2px 0px 2px #666, 0px 2px 2px #666, -2px 0px 2px #666;
+    -webkit-box-shadow: 0px -2px 2px #666, 2px 0px 2px #666, 0px 2px 2px #666, -2px 0px 2px #666;
+}
+
+.dropShadowGeneralLight
+{
+    box-shadow: 0px -2px 2px #999, 2px 0px 2px #999, 0px 2px 2px #999, -2px 0px 2px #999;
+    -moz-box-shadow: 0px -2px 2px #999, 2px 0px 2px #999, 0px 2px 2px #999, -2px 0px 2px #999;
+    -webkit-box-shadow: 0px -2px 2px #999, 2px 0px 2px #999, 0px 2px 2px #999, -2px 0px 2px #999;
+}
+
+.dropShadowBottomWithGradient
+{
+    /* web standards */
+    box-shadow: 0px 1px 2px #666;
+    /* for firefox */
+    -moz-box-shadow: 0px 1px 2px #666;
+    /* for chrome */
+    -webkit-box-shadow: 0px 1px 2px #666;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=160, Color='#666666')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=160, Color='#666666') progid:DXImageTransform.Microsoft.gradient( startColorstr='#013B6A', endColorstr='#012E53',GradientType=0 );
+}
+
+.dropShadowTop
+{
+    /* web standards */
+    box-shadow: 0px -1px 2px #666;
+    /* for firefox */
+    -moz-box-shadow: 0px -1px 2px #666;
+    /* for chrome */
+    -webkit-box-shadow: 0px -1px 2px #666;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=0, Color='#666666')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=0, Color='#666666');
+}
+
+.rgHeader
+{
+    background-image: none !important;
+    background-color: #013B6A !important;
+    color: White !important;
+    font-weight: bold !important;
+}
+
+    .rgHeader a
+    {
+        background-image: none !important;
+        background-color: #013B6A !important;
+        color: White !important;
+        font-weight: bold !important;
+    }
+
+.Orange
+{
+    color: #F7911E;
+}
+
+.Heavy
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.HeaderCell
+{
+    background-color: #013B6A !important;
+    color: White !important;
+    font-weight: bold;
+}
+
+/* CJE - removed due to conflict with IC-2-15 Refresh
+@media print
+{
+    #btnPrint
+    {
+        display: none;
+    }
+
+    #name, #links, #nav, #path
+    {
+        display: none;
+    }
+}
+*/
+
+/* 20090922 - LSmith
+	Adding a bunch of classes here to deal with report header, body, and footer cell widths, etc.
+	on the reporting pages. Due to many layout constratins (including that the body of the report - aka the grid - must
+	scroll, while the header and footer stay in place) this was the best way I could come up with of
+	making this manageable. At least this way you can change the widths universally for all reports.
+*/
+
+div.ReportContainer
+{
+    width: 100%;
+    overflow: scroll;
+    overflow-y: hidden;
+    -ms-overflow-y: hidden;
+}
+
+table.ReportBody
+{
+    width: 100px; /* hack: the report body will obviously be wider than 100px but this forces FF to allow the table to be wider than its parent. */
+    table-layout: fixed;
+    font-size: 7pt;
+}
+
+td.ReportBody_AccountNumber, th.ReportHead_AccountNumber
+{
+    width: 50px;
+}
+
+td.ReportBody_ChildAccountNumber, th.ReportHead_ChildAccountNumber
+{
+    width: 50px;
+}
+
+td.ReportBody_AccountName, th.ReportHead_AccountName
+{
+    width: 130px;
+}
+
+td.ReportBody_Number, th.ReportHead_Number
+{
+    width: 90px;
+}
+
+td.ReportBody_ToNumber, th.ReportHead_ToNumber, td.ReportBody_FromNumber, th.ReportHead_FromNumber, td.ReportBody_OriginNumber, th.ReportHead_OriginNumber
+{
+    width: 90px;
+}
+
+td.ReportBody_Feature, th.ReportHead_Feature
+{
+    width: 76px;
+}
+
+td.ReportBody_CallDate, th.ReportHead_CallDate
+{
+    width: 60px;
+}
+
+td.ReportBody_CallTime, th.ReportHead_CallTime
+{
+    width: 60px;
+}
+
+td.ReportBody_ToNumber, th.ReportHead_ToNumber
+{
+    width: 90px;
+}
+
+td.ReportBody_FromNumber, th.ReportHead_FromNumber
+{
+    width: 90px;
+}
+
+td.ReportBody_State, th.ReportHead_State, th.ReportFoot_State
+{
+    width: 50px;
+}
+
+td.ReportBody_PayPhone, th.ReportHead_PayPhone, th.ReportFoot_PayPhone
+{
+    width: 30px;
+}
+
+td.ReportBody_BilledMinutes, th.ReportHead_BilledMinutes, th.ReportFoot_BilledMinutes
+{
+    width: 55px;
+}
+
+td.ReportBody_BilledAmount, th.ReportHead_BilledAmount, th.ReportFoot_BilledAmount
+{
+    width: 75px;
+}
+
+td.ReportBody_DiscountAmount, th.ReportHead_DiscountAmount, th.ReportFoot_DiscountAmount
+{
+    width: 60px;
+}
+
+td.ReportBody_NetAmount, th.ReportHead_NetAmount, th.ReportFoot_NetAmount
+{
+    width: 65px;
+}
+
+td.ReportBody_AccountCode, th.ReportHead_AccountCode
+{
+    width: 40px;
+}
+
+td.ReportBody_AccountCodeName, th.ReportHead_AccountCodeName
+{
+    width: 80px;
+}
+
+td.ReportBody_City, th.ReportHead_City
+{
+    width: 76px;
+}
+
+td.ReportBody_Calls, th.ReportHead_Calls, th.ReportFoot_Calls
+{
+    width: 40px;
+}
+
+td.ReportBody_InvoiceNumber, th.ReportHead_InvoiceNumber
+{
+    width: 56px;
+}
+
+td.ReportBody_DateTime, th.ReportHead_DateTime
+{
+    width: 100px;
+}
+
+td.ReportBody_CheckBox, th.ReportHead_CheckBox
+{
+    width: 40px;
+    text-align: center;
+}
+
+td.ReportBody_PercentOfTotal, th.ReportHead_PercentOfTotal, th.ReportFoot_PercentOfTotal
+{
+    width: 50px;
+}
+
+td.ReportBody_AreaCode, th.ReportHead_AreaCode, th.ReportFoot_AreaCode
+{
+    width: 40px;
+}
+
+td.ReportBody_DayOfWeek, th.ReportHead_DayOfWeek
+{
+    width: 100px;
+}
+
+td.ReportBody_TotalCalls, th.ReportHead_TotalCalls, th.ReportFoot_TotalCalls
+{
+    width: 100px;
+}
+
+td.ReportBody_TotalMinutes, th.ReportHead_TotalMinutes, th.ReportFoot_TotalMinutes
+{
+    width: 100px;
+}
+
+td.ReportBody_TotalBilledAmount, th.ReportHead_TotalBilledAmount, th.ReportFoot_TotalBilledAmount
+{
+    width: 100px;
+}
+
+td.ReportBody_TotalNetAmount, th.ReportHead_TotalNetAmount, th.ReportFoot_TotalNetAmount
+{
+    width: 100px;
+}
+
+td.ReportBody_TotalDiscountAmount, th.ReportHead_TotalDiscountAmount, th.ReportFoot_TotalDiscountAmount
+{
+    width: 100px;
+}
+
+table.ReportHead, table.ReportFoot
+{
+    color: Black;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid #999;
+    background-color: #C8CFC9;
+    font-weight: bold;
+    font-size: 7pt;
+}
+
+table.ReportHead
+{
+    border-width: 1px 1px 0px 1px;
+}
+
+table.ReportFoot
+{
+    border-width: 0px 1px 1px 1px;
+    float: left;
+    clear: both;
+}
+
+    table.ReportHead th, table.ReportFoot th
+    {
+        border: 1px solid #E2E2E2;
+        padding: 3px;
+    }
+
+.ReportBodyContainerScroll
+{
+    overflow: hidden;
+    overflow-y: auto; /* hack for IE's box model */
+    max-height: 350px;
+    height: expression(this.scrollHeight > 350 ? 350 : this.scrollHeight);
+    float: left;
+}
+
+.ReportBody_AccountCodeDetailTotal_4
+{
+    border: 0px;
+    border-top: double 2px black;
+}
+
+.ReportBody_AccountCodeDetailTotal_else
+{
+    border: 0px;
+    border-top: solid 1px black; /* testing... */ /*width: 200px;*/
+}
+
+table.ReportOptionalParameters td, table.ReportOptionalParameters th
+{
+    padding: 2px;
+    border: 1px solid black;
+}
+
+div.ReportOptionalParameters_Layout
+{
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+div.ReportOptionalParameters_ParamTitle
+{
+    width: 170px;
+    float: left;
+    font-weight: bold;
+}
+
+div.ReportOptionalParameters_ParamInput
+{
+    float: left;
+}
+
+div.ReportOptionalParameters_ShowHideLink
+{
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    color: #999;
+    clear: both;
+}
+
+.BillDateTitle_Layout
+{
+    width: 72px;
+    font-weight: bold;
+}
+
+.spacer6
+{
+    width: 6px;
+}
+
+div.mplscircuitdatalinks
+{
+    white-space: nowrap;
+    padding: 4px;
+}
+
+.mplscircuitdata
+{
+    border: solid 1px black;
+    background-color: #EFF3FB;
+    padding: .3em;
+}
+
+    .mplscircuitdata span
+    {
+        background-color: #EFF3FB;
+    }
+
+.mplscircuitdata-largefont
+{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#waitBackground
+{
+    background-color: White;
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    display: none;
+    position: absolute;
+}
+
+#waitMessage
+{
+    font-size: 3em;
+    z-index: 1000001;
+    top: 230px;
+    border: none;
+    position: absolute;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.tabs_main
+{
+    clear: both;
+    margin: 4px;
+}
+
+div.tabs_body
+{
+    background-color: #ffffff;
+    border-top: #000000 1px solid;
+    border-left: #000000 1px solid;
+    border-right: #000000 1px solid;
+    border-bottom: #000000 1px solid;
+    padding: 4px;
+    margin: 0px;
+}
+
+div.tab_header
+{
+    padding-left: 6px;
+}
+
+div.tab_hidden
+{
+    display: none;
+}
+
+.tabinner_selected
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: #009FC3;
+    text-decoration: none;
+    border-top: #3366cc 4px solid;
+    border-left: #000000 1px solid;
+    border-right: #000000 1px solid;
+    border-bottom: #000000 0px solid;
+    background-color: #ffffff;
+    padding: 4px;
+    display: inline;
+    margin: 0px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tabinner
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: #009FC3;
+    text-decoration: none;
+    border-top: #000000 1px solid;
+    border-left: #000000 1px solid;
+    border-right: #000000 1px solid;
+    border-bottom: #000000 0px solid;
+    background-color: #cccccc;
+    padding: 4px;
+    display: inline;
+    margin: 0px;
+    cursor: pointer;
+    text-align: center;
+}
+/* End MPLS Port Details */
+
+/* Product Summary */
+body.product-summary
+{
+    margin: 10px;
+    font: 8pt Verdana;
+}
+
+table.product-summary
+{
+    font: 8pt Verdana;
+}
+
+    table.product-summary td
+    {
+        padding: 0 1em 0 1em;
+    }
+
+    table.product-summary .toprow
+    {
+        background: black;
+        color: White;
+        font-weight: bold;
+    }
+
+    table.product-summary .oddrow
+    {
+        background: #F3F3F6;
+    }
+/* End Product Summary */
+
+/* Account Review */
+.btnPrintAccountSummaryTop
+{
+    position: relative;
+    top: 2px;
+}
+
+#btnViewProductSummary
+{
+    float: right;
+    position: relative;
+    top: 12px;
+}
+/* End Account Review */
+
+/* Begin User Guide Styles */
+.Panel1
+{
+    font: 12pt Verdana;
+    padding-bottom: 10px;
+}
+
+.Panel2
+{
+    font: 10pt Verdana;
+    padding-left: 25px;
+    padding-bottom: 20px;
+}
+
+.Panel3
+{
+    font: 8pt Verdana;
+    padding-left: 25px;
+}
+
+.PanelCategoryTitle
+{
+    font: 12pt Verdana;
+    font-weight: bold;
+	padding-top: 15px;
+}
+
+.PanelSectionTitle
+{
+    font: 10pt Verdana;
+    font-weight: bold;
+}
+
+.PanelLink
+{
+    font: 8pt Verdana;
+    color: Blue;
+    font-weight: bold;
+}
+
+    .PanelLink:hover
+    {
+        font: 8pt Verdana;
+        color: Blue;
+        font-weight: bold;
+    }
+
+.PanelDesc
+{
+    font: 8pt Verdana;
+    color: Black;
+    padding-bottom: 10px;
+}
+
+/* End User Guide Styles */
+
+/* Begin Billing Reports Styles */
+
+.GridHdrSorted
+{
+    background-color: #007BC3;
+    padding-left: 1px;
+    color: #FFF;
+}
+
+.GridHdrNotSorted
+{
+    background-color: #013B6A;
+    padding-left: 1px;
+    color: #FFF;
+}
+
+.NoDataRow
+{
+    background-color: #ffffff;
+    padding-left: 1px;
+    color: red;
+    font-family: Arial;
+    font-size: 9pt;
+    font-style: italic;
+}
+
+.NavPanelPageNum
+{
+    border: 1px gray solid;
+    background: transparent;
+    text-align: center;
+    font-family: Arial;
+    font-size: 8pt;
+}
+
+.NavPanelPageCount
+{
+    border: 1px gray solid;
+    background: transparent;
+    text-align: right;
+    font-family: Arial;
+    font-size: 8pt;
+}
+
+.NavPanelGoto
+{
+    font-family: Arial;
+    font-size: 9pt;
+    color: blue;
+    font-weight: bold;
+}
+
+.NavPanelSymbol
+{
+    font-family: Arial;
+    font-size: 9pt;
+    color: blue;
+    font-weight: bold;
+}
+
+.InvDateDropDown
+{
+    font-family: Arial;
+    font-size: 9pt;
+    border: 1px gray solid;
+    border: 1px gray solid;
+}
+
+.InvDateButton
+{
+    font-family: Arial;
+    font-size: 9pt;
+    color: darkblue;
+    font-weight: bold;
+    border: 1px gray solid;
+    background: #dedede;
+}
+
+/* End Billing Reports Styles */
+
+/* Start menu styles */
+
+.SiteMenu {
+    position: relative;
+    z-index: 1000;
+}
+
+.DynamicMenuItem
+{
+    color: #ffffff;
+    background-color: #007BC3;
+    padding: 8px;
+    border-bottom: 1px solid #FFF;
+    border-right: 1px solid #fff; /* todo: this cuts off the gradient so it isn't perfect */
+    font-size: 12px;
+    font-family: 'Avenir LT W01 85 Heavy', Verdana;
+}
+
+.DynamicMenuItemHover
+{
+    background-color: #00457C;
+    color: #FECA37;
+}
+
+.StaticMenuItem
+{
+    width: 100px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: 'Avenir LT W01 85 Heavy', Verdana;
+}
+
+.StaticMenuItemSelected
+{
+    color: #002D53;
+}
+
+.BlueGradient
+{
+    background: #013B6A; /* Old browsers */
+    background: -moz-linear-gradient(top, #013B6A 0%, #012E53 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#013B6A), color-stop(100%,#012E53)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #013B6A 0%,#012E53 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #013B6A 0%,#012E53 100%); /* Opera11.10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013B6A', endColorstr='#012E53',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #013B6A 0%,#012E53 100%); /* W3C */
+}
+
+.OrangeGradient
+{
+    background: #013B6A; /* Old browsers */
+    background: -moz-linear-gradient(top, #FECA37 0%, #F46E03 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FECA37), color-stop(100%,#F46E03)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FECA37 0%,#F46E03 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FECA37 0%,#F46E03 100%); /* Opera11.10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FECA37', endColorstr='#F46E03',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(to bottom, #FECA37 0%,#F46E03 100%); /* W3C */ /* "top" was changed to "to bottom" */
+}
+
+/* CJE - removed due to conflict with IC-2-15 Refresh
+#menu
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+    #menu a
+    {
+        display: block;
+        text-align: center;
+        padding: 5px;
+        text-transform: uppercase;
+    }
+
+a.MenuItemClass[href="#"]
+{
+    cursor: default !important;
+}
+*/
+
+/*empty grid message text*/
+.empty-grid
+{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* radcaptcha restyling */
+.rcRefreshImage, .rcCaptchaAudioLink
+{
+    color: #666;
+    width: 130px;
+    font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.rcCaptchaAudioLink {
+    margin-left: -150px;
+}
+
+.rcRefreshImage {
+    margin-left: 5px;
+}
+
+.rcRefreshImage:hover, .rcCaptchaAudioLink:hover
+{
+    color: Red;
+}
+/* end radcaptcha restyling */
+
+.widget-body {
+    border-left: 1px solid #CCC;
+    background-image: url('../../Images/widget-bkground.png');
+    background-repeat: repeat;
+    background-color: rgb(240, 240, 240);
+}
+
+.widget-head
+{
+    /*background-color: #FFC016 !important;*/
+    color: Black !important;
+    font-weight: bold;
+    border-top: solid 1px #CCC;
+    border-right: solid 1px #CCC;
+    height: 18px;
+    float: left;
+    padding: 2px 5px 2px 5px;
+    background-color: #FECA37;
+}
+
+/*global*/
+.pointer{
+    cursor: pointer;
+}
+
+.k-loading-mask {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+    z-index: 2;
+
+}
+.failure {
+    position: absolute;
+
+     margin-left: 2px;
+    height: 16px;
+    width: 16px;
+     background-image: url('data:image/gif;base64,R0lGODlhEAAQAPf/ANM4M9Q8NtU+ONdDPM1DQdlHQNlKQtxOR9tUTd1VTdNXUNVaVdtYUt9bVN5fWdpqZOBYUeFdVeJhWuBlX+VmYOVoYuhsZ+huaeR1b+pxbeV+eOl3cOx1ce15dup9ee18ee+KhuaZleefm/CUkfGfm/Kjn/CsqPLBvvTCv/XHxPfJx/bS0PfU0vro5/vu7f339////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ACH5BAEKAP8ALAAAAAAQABAAAAi7AP8JFNihoMGBCP91EDHCw4YMFzZgWJCwQwmHGy5csEBBggSKBEl0eKjRgkcJESKADDFyhIqNHlOYgIBAgUIQD1vAUBETxosKCGqOhOjBBQwWJ3xqQGDAAIAOEDduMOrTA1MDBZ5qPJkCxtGrBQYAkFCBrAQUXo2iaDpAwNiyZ71qkKA2KwAA/x54ZAFDQ1MHLVwouCsQQAMIEDAcwDqgQYO7eAsHbRpWLOSEABQwdguAQOSE/yRAHpswIAA7') /*../../Images/Failure.gif*/;
+}
+

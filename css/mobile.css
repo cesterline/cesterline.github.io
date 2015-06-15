@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Browser Support
+   ========================================================================== */
+/* support for IE 10, viewport issue, while running on Windows phones */
+@-ms-viewport {
+  width: device-width;
+}
+
+/* system font fallback for mobile devices */
+@media (min-width: 1000px) {
+  body {
+    font-family: 'FontName', Fallback, sans-serif;
+  }
+}

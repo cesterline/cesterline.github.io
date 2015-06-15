@@ -1,0 +1,24 @@
+﻿.k-callout-n{border-bottom-color:#000}
+.k-callout-w{border-right-color:#000}
+.k-callout-s{border-top-color:#000}
+.k-callout-e{border-left-color:#000}
+
+.k-widget.k-tooltip
+{
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+	background-color: white;
+	color: black;
+	background-image: none;
+	background-repeat: no-repeat;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+	margin-left:15px;
+	margin-right:15px;
+	min-width: 200px;
+	max-width: 500px;
+	text-align: left;
+}

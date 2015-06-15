@@ -1,0 +1,140 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #A0A0A0;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.UserSwitchLink {
+    color: #38B4FC;
+    padding: 0 10px 0 0;
+}
+
+.UserSwitchLink:hover {
+    color:#fff;
+    text-decoration:underline;
+}
+
+.UserSwitchLink:active {
+    color:red;
+}
+
+.LogoutLinkWithSwitcher {
+    color: #38B4FC;
+    padding: 0 0 0 10px;
+}
+
+.LogoutLinkWithSwitcher:hover {
+    color:#fff;
+    text-decoration:underline;
+}
+
+.LogoutLinkWithSwitcher:active {
+    color:red;
+}
+
+.pointer{
+    cursor:pointer;
+}
+
+/*calnet reports page*/
+.float-right {
+    float: right;
+}
+.styledButton {
+    background-color: #EEEEEE;
+    border: 1px solid #666666;
+    color: #666666;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    font-family: Verdana;
+    font-size: 11px;
+    text-decoration:none;
+} 
+
+.k-tabstrip {
+    border: none !important;
+}
+
+.k-tabstrip .k-item {
+    border: 1px solid #848484 !important;
+    border-bottom: none !important;
+    border-width: 0px 1px 0px !important;
+}
+
+.k-tabstrip .k-content {
+    border: 1px solid #848484 !important;
+}
+
+/* utility class to hide close button on jQuery UI dialog */
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+/* increase z-index of jQ UI background overlay - nothing except "front" modals should be over this */
+.ui-widget-overlay {
+    z-index: 9999;
+    /* See http://stackoverflow.com/questions/3200000/jquery-ui-modal-dialog-stripe-issue - ideal would be proper image */
+    /*background-color: #888888;*/
+    background: #888888;
+    opacity: .7;
+}

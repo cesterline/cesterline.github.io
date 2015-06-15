@@ -1,0 +1,13 @@
+﻿div#loadingimg {
+    background: url("../Images/prequalloading.gif") no-repeat center;
+    width: 100%;
+    height: 32px;
+
+}
+
+div#loadingimgIC {
+    background: url("../Images/loadingIC_2x.gif") no-repeat center;
+    width: 100%;
+    height: 32px;
+
+}
