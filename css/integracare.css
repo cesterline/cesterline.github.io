@@ -125,17 +125,31 @@ body {
 	box-shadow: inset 0px 4px 4px -2px rgba(0,0,0,0.40);
 }
 footer {
-	background-color: #7f7f7f !important;
-	padding: 0;
+	padding: 36px;
+	background-color: #888888 !important;
 }
-footer > div {
-	padding: 24px 30px;
+footer, footer a {
+	color: #aaa !important;
+	font-size: 12px;
 }
 footer #legal {
 	text-align: right;
-	color: #aaa;
-	color: rgba(255,255,255,0.25);
-	font-size: 12px;
+}
+footer#ff {
+	background-color: #999999 !important;
+}
+footer#ff a {
+	color: #bbb !important;
+}
+footer#ff ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+footer#ff h4 {
+	color: #ccc;
+	margin-top: 0;
+	text-transform: uppercase;
 }
 
 
@@ -544,7 +558,7 @@ Accessibility
 	height: 66px;
 	background: url("../gfx/logo-integracare.png");
 }
-.logo-integra {
+#logo-integra {
 	width: 102px;
 	height: 27px;
 	background: url("../gfx/logo-integra.jpg");
