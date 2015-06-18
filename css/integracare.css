@@ -49,7 +49,7 @@ h6,
 	-moz-osx-font-smoothing: grayscale;
 }
 h1 {
-	font-size: 20px;
+	font-size: 22px;
 }
 h2 {
 	font-size: 18px;
@@ -59,6 +59,7 @@ h3 {
 }
 h4 {
 	font-size: 14px;
+	font-weight: bold !important;
 }
 h1, h2, h3, h4 {
 	font-weight: 500;
@@ -585,15 +586,19 @@ Accessibility
 	margin: 1px 0 0 0;
 }
 #page-title .btn-group {
-	margin: 2px 0 0 0;
+	margin: -3px 0 -7px 0;
 }
 #page-title .btn-group a {
-	padding: 8px 27px 5px;
+	padding: 7px 27px 5px;
 }
 #page-title .btn-group a > span {
 	font-weight: 500 !important;
 	color: #808080 !important;
 	text-transform: none;
+}
+#page-title .btn-group .dropdown-menu {
+	max-height: 300px;
+	overflow-y: scroll;
 }
 #page-title .btn .drop-down-arrow {
 	font-size: 9px;
@@ -601,8 +606,6 @@ Accessibility
 }
 #page-title .btn-group a > span:first-of-type {
 	font-size: 14px;
-}
-#page-title .btn-group a > span > span {
 }
 .pnl {
 	background-color: #fff;
@@ -683,6 +686,12 @@ Accessibility
 .tout {
 	background-color: #f5f5f5;
 	padding: 24px;
+}
+.tout h2 {
+	margin-top: 0;
+}
+.tout h4 {
+	margin-top: 20px;
 }
 
 /* ==========================================================================
