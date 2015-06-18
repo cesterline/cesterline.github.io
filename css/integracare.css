@@ -574,7 +574,7 @@ Accessibility
 #Main
 ========================================================================== */
 #page-title {
-	padding: 0 24px 32px 23px;
+	padding: 0 0 32px 23px;
 	color: #808080;
 	font-size: 14px;
 }
@@ -589,7 +589,7 @@ Accessibility
 	margin: -3px 0 -7px 0;
 }
 #page-title .btn-group a {
-	padding: 7px 27px 5px;
+	padding: 7px 24px 5px;
 }
 #page-title .btn-group a > span {
 	font-weight: 500 !important;
@@ -598,7 +598,7 @@ Accessibility
 }
 #page-title .btn-group .dropdown-menu {
 	max-height: 300px;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 #page-title .btn .drop-down-arrow {
 	font-size: 9px;
