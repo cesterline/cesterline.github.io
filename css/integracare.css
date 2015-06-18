@@ -574,22 +574,22 @@ Accessibility
 #Main
 ========================================================================== */
 #page-title {
-	padding: 0 0 32px 23px;
+	padding: 0 0 5px 23px;
 	color: #808080;
 	font-size: 14px;
 }
 #page-title h1 {
 	color: #808080;
-	margin: 0;
+	margin: 3px 0 26px;
 }
 #page-title h4 {
-	margin: 6px 24px 0 0;
+	margin: 7px 24px 0 0;
 }
 #page-title span {
 	margin: 1px 0 0 0;
 }
 #page-title .btn-group {
-	margin: -3px -1px -7px 0;
+	margin: -2px -1px 0;
 }
 #page-title .btn-group a {
 	padding: 7px 24px 5px;
