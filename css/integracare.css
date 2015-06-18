@@ -582,6 +582,9 @@ Accessibility
 	color: #808080;
 	margin: 3px 0 26px;
 }
+#page-title h1:empty {
+	margin: 0;
+}
 #page-title h4 {
 	margin: 7px 24px 0 0;
 }
