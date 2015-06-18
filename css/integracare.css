@@ -582,6 +582,9 @@ Accessibility
 	color: #808080;
 	margin: 0;
 }
+#page-title h4 {
+	margin: 6px 24px 0 0;
+}
 #page-title span {
 	margin: 1px 0 0 0;
 }
@@ -591,7 +594,7 @@ Accessibility
 #page-title .btn-group a {
 	padding: 7px 24px 5px;
 }
-#page-title .btn-group a > span {
+#page-title .btn-group a > span, #page-title h4 {
 	font-weight: 500 !important;
 	color: #808080 !important;
 	text-transform: none;
