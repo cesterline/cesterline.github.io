@@ -222,10 +222,8 @@ Materialize updates
 .dropdown-menu li:hover {
 	background-color: #f5f5f5;
 }
-.dropdown-menu li a:hover {
-}
 #menu .dropdown-menu a.crnt {
-	background-color: rgba(0,0,0,0.1);
+	background-color: #f5f5f5;
 	color: #000 !important;
 	cursor: default;
 }
@@ -508,7 +506,10 @@ Listomatic
 #utility .inline-list ul li a {
 	padding: 11px 7px 11px 8px;
 }
-
+#utility .inline-list ul li a.crnt {
+	cursor: default !important;
+	text-decoration: none !important;
+}
 footer #legal a {
 	color: #bbb;
 	color: rgba(255,255,255,0.35);
