@@ -166,8 +166,8 @@ a:focus {
 
 @media(min-width:767px) {
     #intro, #about, #portfolio, #contact {
-        height: 100%;
-        padding: 0;
+        /*height: 100%;*/
+        /*padding: 0;*/
     }
 
     #intro .fill-page .brand-heading {
