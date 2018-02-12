@@ -372,6 +372,9 @@ body {
     .img-responsive{
         max-height: 175px;
     }
+    .polaroid-images a {
+        margin: 10px 0;
+    }    
 }
 
 .polaroid-images a:after {
