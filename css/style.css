@@ -126,7 +126,8 @@ a:focus {
 #intro, #about, #portfolio, #contact {
     display: table;
     width: 100%;
-    height: auto;
+    height: 100%;
+    overflow:auto;
     padding: 100px 0;
     text-align: center;
     color: #222;
