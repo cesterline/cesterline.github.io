@@ -58,8 +58,12 @@ a:focus {
 .navbar-custom {
     margin-bottom: 0;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: rgba(0,0,0,.3);
+}
+
+.navbar-brand {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    
 }
 
 .navbar-custom .navbar-brand {
