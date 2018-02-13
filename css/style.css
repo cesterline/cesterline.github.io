@@ -73,10 +73,9 @@ a:focus {
 .navbar-custom .navbar-brand:focus {
     outline: 0;
 }
-
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
-    font-size: 16px;
+    font-size: 302px;
     color: #fff;
 }
 
@@ -194,7 +193,7 @@ a:focus {
         pointer-events: none;
     }
     #portfolio .row:last-of-type .polaroid-images a:before {
-        content: "Application intended for tablet and above";
+        content: "Application intended for use on tablet and above";
         position: absolute;
         left: 0;
         top: 0;
