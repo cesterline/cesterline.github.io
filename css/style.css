@@ -119,7 +119,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: rgba(0,0,0,.3);
+        background-color: rgba(0,0,0,.4);
     }
 
     .navbar-custom.top-nav-collapse {
@@ -181,6 +181,11 @@ a:focus {
 
     #intro .fill-page #intro-text {
         font-size: 25px;
+    }
+}
+@media (max-width: 992px) {
+    #portfolio .row:nth-of-type(2) {
+        display: none;
     }
 }
 
