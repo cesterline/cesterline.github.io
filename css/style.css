@@ -193,7 +193,7 @@ a:focus {
         pointer-events: none;
     }
     #portfolio .row:last-of-type .polaroid-images a:before {
-        content: "Application intended for use on tablet and above";
+        content: "Application usable on tablet and above";
         position: absolute;
         left: 0;
         top: 0;
