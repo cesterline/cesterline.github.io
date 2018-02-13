@@ -193,17 +193,29 @@ a:focus {
         pointer-events: none;
     }
     #portfolio .row:last-of-type .polaroid-images a:before {
-        content: "Application usable on tablet (layout mode) and above";
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
         height: 100%;
         width: 100%;
         background-color: rgba(158,158,158,.8);
-        color: #fff;
+    }
+    #portfolio .row:last-of-type .polaroid-images a div:before {
+        content: "Application usable on tablet (layout mode) and above";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        padding: 0 20px;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;        
+        color: #ffffff;
         font-size: 20px;
-        font-weight: 600;
-        padding: 50px;
+        font-weight: 600;                
     }
 }
 
