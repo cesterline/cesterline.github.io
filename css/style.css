@@ -144,6 +144,7 @@ a:focus {
 }
 #intro {
     background-image: url(../img/intro-bg.jpg);
+    background-position: top;
 }
 #about {
     background-image: url(../img/about-bg.jpg);
