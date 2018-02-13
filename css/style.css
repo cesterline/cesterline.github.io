@@ -63,7 +63,7 @@ a:focus {
 }
 
 .navbar-brand {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .navbar-custom .navbar-brand {
@@ -308,6 +308,14 @@ ul.banner-social-buttons {
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
     }
+
+    .navbar-brand {
+        height: 56px;
+        line-height: 56px;
+        padding: 0 15px;
+        vertical-align: middle;
+    }
+
 }
 
 footer {
