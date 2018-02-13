@@ -184,8 +184,27 @@ a:focus {
     }
 }
 @media (max-width: 992px) {
-    #portfolio .row:nth-of-type(2) {
-        display: none;
+    #portfolio .row:last-of-type .polaroid-images {
+        opacity: .7;
+    }
+    #portfolio .row:last-of-type .polaroid-images a {
+        color: currentColor;
+        cursor: not-allowed;
+        text-decoration: none;
+        pointer-events: none;
+    }
+    #portfolio .row:last-of-type .polaroid-images a:before {
+        content: "Application intended for tablet and above";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(158,158,158,.8);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 50px;
     }
 }
 
