@@ -1,12 +1,14 @@
-body, html {
-    width: 100%;
-    height: 100%;    
-}
-
 body {
+    width: 100%;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     color: #fff;
     background-color: #fff;
+}
+
+html {
+    width: 100%;
+    height: 100%;
 }
 
 h1,
@@ -27,6 +29,14 @@ p {
     font-size: 18px;
     line-height: 1.5;
 }
+
+/*@media(min-width:767px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}*/
 
 a {
     color: #222;
@@ -83,6 +93,25 @@ a:focus {
     outline: 0;
     background-color: rgba(117,117,117,.86);
 }
+/*@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: rgba(117,117,117,.86);
+    }
+
+    .navbar-custom.top-nav-collapse {
+    }
+}*/
 
 #intro, #about, #portfolio, #contact {
     display: table;
@@ -126,6 +155,52 @@ a:focus {
     font-size: 18px;
 }
 
+/*@media(min-width:767px) {
+    #intro .fill-page .brand-heading {
+        font-size: 48px;
+    }
+
+    #intro .fill-page #intro-text {
+        font-size: 25px;
+    }
+}
+@media (max-width: 992px) {
+    #portfolio .row:last-of-type .polaroid-images {
+        opacity: .7;
+    }
+    #portfolio .row:last-of-type .polaroid-images a {
+        color: currentColor;
+        cursor: not-allowed;
+        text-decoration: none;
+        pointer-events: none;
+    }
+    #portfolio .row:last-of-type .polaroid-images a:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(158,158,158,.8);
+    }
+    #portfolio .row:last-of-type .polaroid-images a div:before {
+        content: "Application usable on tablet (layout mode) and above";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        padding: 0 20px;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;        
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 600;                
+    }
+}*/
+
 .btn-circle {
     width: 70px;
     height: 70px;
@@ -133,7 +208,7 @@ a:focus {
     padding: 7px 16px;
     border: 2px solid #222;
     border-radius: 35px;
-    font-size: 40px;
+    font-size: 60px;
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -143,7 +218,8 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    background: rgba(0,0,0,.15);
+    color: #fff;
+    background: rgba(255,255,255,.1);
 }
 
 .btn-circle i.animated {
@@ -229,6 +305,31 @@ ul.banner-social-buttons {
     margin-top: 0;
 }
 
+/*@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons li:last-child {
+        margin-bottom: 0;
+    }
+
+    .navbar-header a {
+        line-height: 64px;
+        height: 64px;
+        margin-left: 24px;
+    }
+
+}*/
+
 footer {
     padding: 50px 0;
 }
@@ -291,6 +392,15 @@ body {
     z-index:0;
     position:relative;
 }
+/*@media screen and (max-width: 767px) {
+    .img-responsive{
+        max-height: 175px;
+    }
+    .polaroid-images a {
+        margin: 10px 0;
+    }    
+}*/
+
 .polaroid-images a:after {
     color: #333;
     font-size: 16px;
@@ -347,6 +457,8 @@ body {
         font-size: 20px;
         line-height: 1.6;
     }
+}
+@media(min-width:767px) {
     .navbar {
         padding: 20px 0;
         border-bottom: 0;
@@ -365,6 +477,8 @@ body {
     .navbar-custom.top-nav-collapse {
         /* border-bottom: 1px solid rgba(255,255,255,.3); */
     }
+}
+@media(min-width:767px) {
     #intro .fill-page .brand-heading {
         font-size: 48px;
     }
@@ -372,32 +486,6 @@ body {
     #intro .fill-page #intro-text {
         font-size: 25px;
     }
-}
-@media(max-width:767px) {
-    ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
-    }
-
-    .navbar-header a {
-        line-height: 64px;
-        height: 64px;
-        margin-left: 24px;
-    }
-
-}
-@media screen and (max-width: 767px) {
-    .img-responsive{
-        max-height: 175px;
-    }
-    .polaroid-images a {
-        margin: 10px 0;
-    }    
 }
 @media (max-width: 992px) {
     #portfolio .row:last-of-type .polaroid-images {
@@ -439,4 +527,31 @@ body {
     ul.banner-social-buttons {
         margin-top: 15px;
     }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons li:last-child {
+        margin-bottom: 0;
+    }
+
+    .navbar-header a {
+        line-height: 64px;
+        height: 64px;
+        margin-left: 24px;
+    }
+
+}
+@media screen and (max-width: 767px) {
+    .img-responsive{
+        max-height: 175px;
+    }
+    .polaroid-images a {
+        margin: 10px 0;
+    }    
 }
