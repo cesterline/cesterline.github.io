@@ -66,22 +66,20 @@ a:focus {
     color: #fff;
 }
 
-.navbar-custom .nav li.active {
-    outline: nonte;
-    background-color: rgba(255,255,255,.3);
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active, .nav > li.active {
+    text-decoration: none;
+    outline: none;
 }
 
-.navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
+    background-color: transparent;
 }
 
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li a.active {
-    outline: 0;
-    background-color: rgba(117,117,117,.86);
+.nav > li.active {
+    background-color: rgba(0,0,0,.2);
+    -webkit-transition: background .6s ease-in-out;
+    -moz-transition: background .6s ease-in-out;
+    transition: background .6s ease-in-out;
 }
 
 #intro, #about, #portfolio, #contact {
@@ -99,16 +97,20 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
+
 #intro {
     background-image: url(../img/intro-bg.jpg);
     background-position: top;
 }
+
 #about {
     background-image: url(../img/about-bg.jpg);
 }
+
 #portfolio {
     background-image: url(../img/portfolio-bg.jpg);
 }
+
 #contact {
     background-image: url(../img/contact-bg.jpg);
 }
