@@ -386,17 +386,17 @@ body {
         margin-bottom: 20px;
         padding: 0;
     }
-
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
     }
-
+    .navbar-custom {
+        box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);        
+    }  
     .navbar-header a {
         line-height: 64px;
         height: 64px;
         margin-left: 24px;
     }
-
 }
 @media screen and (max-width: 767px) {
     .img-responsive{
@@ -404,7 +404,7 @@ body {
     }
     .polaroid-images a {
         margin: 10px 0;
-    }    
+    }
 }
 @media (max-width: 992px) {
     #portfolio .row:last-of-type .polaroid-images {
