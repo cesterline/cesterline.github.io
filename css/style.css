@@ -48,7 +48,7 @@ a:focus {
 .navbar-custom {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
-    background-color: rgba(117,117,117,.86);
+    background-color: rgba(117,117,117,.94);
     font-size: 14px;
 }
 
@@ -229,7 +229,7 @@ a:focus {
     border: 1px solid rgba(0,0,0,0);
     outline: 0;
     color: #ddd;
-    background-color: rgba(117,117,117,.86);
+    background-color: rgba(117,117,117,.94);
 }
 
 ul.banner-social-buttons {
@@ -366,12 +366,12 @@ body {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: rgba(117,117,117,.86);
+        background-color: rgba(117,117,117,.94);
+        box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+        /*box-shadow: 0 4px 4px 0px rgba(0,0,0,0.14), 0 4px 8px rgba(0,0,0,.28);*/
+        /*box-shadow: 0 4px 4px 0px rgba(0,0,0,0.36);*/
     }
 
-    .navbar-custom.top-nav-collapse {
-        /* border-bottom: 1px solid rgba(255,255,255,.3); */
-    }
     #intro .fill-page .brand-heading {
         font-size: 48px;
     }
